@@ -10,7 +10,6 @@ A lightweight Luau framework for declarative remote creation and startup control
 
 - **Declarative Stages** - Control startup flow with a clean builder pattern
 - **Remote Declarations** - Define and validate remotes in one place
-- 
 
 ## Quick Start
 
