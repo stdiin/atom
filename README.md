@@ -4,20 +4,13 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 ![Status](https://img.shields.io/badge/status-experimental-orange)
 
-A lightweight Roblox framework for declarative module loading and startup control.
+A lightweight Luau framework for declarative remote creation and startup control
 
 ## Features
 
 - **Declarative Stages** - Control startup flow with a clean builder pattern
 - **Remote Declarations** - Define and validate remotes in one place
-- **Client Listeners** - Declarative server→client event handling
-- **Zero Dependencies** - Single file, drop it in and go
-
-## Installation
-
-1. Download `Atom.luau`
-2. Place it in `ReplicatedStorage`
-3. Require it: `local Atom = require(ReplicatedStorage.Atom)`
+- 
 
 ## Quick Start
 
@@ -29,7 +22,7 @@ local Atom = require(ReplicatedStorage.Atom)
 Atom:AddChildren(ServerStorage.Systems)
 
 -- Define startup stages
-Atom:Stage("core")
+Atom:Stage("Core")
     :Require("DataStore", "Stats")
 
 Atom:Run()
@@ -93,12 +86,6 @@ function UI:OnDamage(damage)
 end
 
 return UI
-```
-
-### Calling Remotes (Client)
-```lua
-local Combat = Atom:GetRemotes("CombatService")
-Combat.CastSpell:FireServer("fireball")
 ```
 
 ## API Reference
